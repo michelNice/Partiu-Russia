@@ -23,27 +23,27 @@ ul {
   background-size: cover;
   height: 70vh;
   background-position: center;
+  position: relative;
 }
-
-.content {
+.hero .content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -20%);
   color: #fff;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  position: absolute;
-  transform: translate(-50%);
-  left: 50%;
-  top: 25%;
+  flex-direction: column;
 }
-.content h1 {
-  font-size: 5.8rem;
+.hero .content h1 {
+  font-size: 5.7rem;
 }
-.content p {
-  font-size: 1.3rem;
+.hero .content p {
+  text-align: center;
   padding: 2rem 0;
+  font-size: 1.5rem;
 }
-.content a {
+.hero .content button {
   padding: 1rem 2rem;
   color: #fff;
   font-size: 1.2rem;
@@ -51,8 +51,10 @@ ul {
   border: 0;
   border-radius: 0.3rem;
   cursor: pointer;
+  position: relative;
+  z-index: 10;
 }
-.content a:hover {
+.hero .content button:hover {
   background: rgb(11, 125, 3);
 }
 
@@ -65,11 +67,13 @@ ul {
   display: flex;
   justify-content: space-between;
   padding: 1rem 0;
+  position: relative;
+  z-index: 20;
 }
 
 .navbar {
   background: #fff;
-  z-index: 99999;
+  z-index: 1;
 }
 
 .navbar .logo {
@@ -84,14 +88,14 @@ ul {
 }
 .main-nav li {
   display: inline-block;
-  padding: 0.5rem 2rem;
+  padding: 0.8rem 1.8rem;
 }
 .main-nav li a:visited,
 .main-nav li a:link {
   cursor: pointer;
   font-weight: 500;
   color: rgb(0, 0, 0);
-  font-size: 1.1rem;
+  font-size: 1.2rem;
 }
 .main-nav .none_underline:last-child {
   list-style: none;
@@ -157,6 +161,8 @@ ul {
 @media (max-width: 80rem) {
   .navbar {
     padding: 0 1rem;
+    position: relative;
+    z-index: 20;
   }
   .navbar .logo {
     font-size: 1rem;
@@ -174,7 +180,7 @@ ul {
     padding: 0.6rem;
   }
   .main-nav li a:visited {
-    font-size: 0.8rem;
+    font-size: 0.2rem;
   }
   .main-nav li a:hover {
     border: 0;
@@ -182,25 +188,34 @@ ul {
   #toggle {
     display: block;
   }
-  .content {
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  .hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../img/hero.webp);
+    background-size: cover;
+    height: 70vh;
+    background-position: center;
+    position: relative;
+  }
+  .hero .content {
     position: absolute;
-    transform: translate(-50%);
+    top: 50%;
     left: 50%;
-    top: 20%;
-    width: 100%;
+    transform: translate(-50%, -50%);
     text-align: center;
+    width: 100%;
   }
-  .content h1 {
-    font-size: 3rem;
+  .hero .content h1 {
+    font-size: 2.7rem;
   }
-  .content p {
-    font-size: 1.3rem;
-    padding: 2rem 0;
+  .hero .content p {
+    text-align: center;
+    margin: 0rem 0;
+  }
+  .hero .content button {
+    padding: 1rem 1.5rem;
+    font-size: 0.8rem;
+  }
+  .hero .content button:hover {
+    background: rgb(11, 125, 3);
   }
 }
 
