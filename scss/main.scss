@@ -1,3 +1,6 @@
+/**********************/
+     /*SETTING UP*/
+/**********************/
 $color:(
     --first--color:rgb(11, 125, 3),
     --second--color:rgb(173, 0, 0),
@@ -10,6 +13,7 @@ $color:(
     @return  map-get($color, $colors)
 };
 
+
 @mixin button(){
     padding:1rem 2rem;
     color: color(--white--color);
@@ -21,9 +25,12 @@ $color:(
     position: relative;
     z-index:10;
     
-    &:hover{
-        background:color(--first--color);
-    }
+    &:hover{background:color(--first--color);}
+}
+
+@mixin row(){
+    margin:0 auto;
+    max-width:75rem;
 }
   
 *{
@@ -42,7 +49,16 @@ a{text-decoration:none;}
 
 ul{list-style:none;}
 
+h2{text-align: center;}
 
+/**********************/
+     /*HERO AND NAV*/
+/**********************/
+
+.row{
+    margin:0 auto;
+    max-width:75rem;
+}
 
 .hero{
     background:linear-gradient(rgba(0, 0, 0, 0.300),rgba(0, 0, 0, 0.300)),url(../img/hero.webp);
@@ -61,9 +77,7 @@ ul{list-style:none;}
         display: flex;
         align-items: center;
         flex-direction:column;
-        h1{
-            font-size: 5.7rem;
-        }
+        h1{font-size: 5.7rem;}
 
         p{
            text-align: center;
@@ -71,15 +85,14 @@ ul{list-style:none;}
            font-size:1.5rem;
         }
 
-        button{
-            @include button();
-        }
+        button{@include button();}
     }
 }
-.row{
-    margin:0 auto;
-    max-width:75rem;
-}
+
+/**********************/
+     /*NEVEGATION*/
+/**********************/
+
 .flex-nav{
     display:flex;
     justify-content:space-between;
@@ -93,13 +106,13 @@ ul{list-style:none;}
 }
 
 .navbar .logo{
-    color: color(--grey--color);
+    color:color(--grey--color);
     font-size: 1.7rem;
     font-weight: 800;
 }
+
 .main-nav{
-    float:left;
-    z-index: 100;
+    z-index:-1;
     li{
         display:inline-block;
         padding:0.8rem 1.8rem;
@@ -168,33 +181,53 @@ ul{list-style:none;}
     visibility: visible;
 }
 
+/**********************/
+     /*MOBILE*/
+/**********************/
 
+.service{
+    margin:2rem 0;
+    text-align: center;
+    @include row();
+
+    h2{
+        font-size:3.2rem;
+        padding:1rem 0;
+        font-weight: 600;
+    }
+
+    .service-conteiner{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+
+    .service-conteiner h2{
+        font-size: 2rem;
+    }
+
+    .service-conteiner .grid-item img {
+        width: 100%;
+        height: auto;
+        display: block;
+        margin-bottom: 10px;
+    }
+}
+
+/**********************/
+     /*MOBILE*/
+/**********************/
 
 @media(max-width:80rem){
     @mixin button(){
         padding:1rem 1.5rem;
-       
         font-size:0.8rem;
-        &:hover{
-            background:color(--first--color);
-        }
+       
     }
+    .navbar{padding:0 1rem;}
 
+    .navbar .logo{font-size:1rem;}
 
-    .navbar{
-        padding:0 1rem;
-        position: relative;
-        z-index:20;
-        
-    }
-    .navbar .logo{
-        font-size:1rem;
-    }
-
-    .flex-nav{
-        display:flex;
-        justify-content:space-between;
-    }
 
     .main-nav{
         display:none;
@@ -207,49 +240,52 @@ ul{list-style:none;}
             font-size:0.2rem;
 
         }
-        li a:hover{
-            border:0;
-        }
+        li a:hover{border:0;}
     }
 
-    #toggle {
-        display:block;
-    }
+    #toggle {display:block;}
 
-    
     .hero{
-        background:linear-gradient(rgba(0, 0, 0, 0.300),rgba(0, 0, 0, 0.300)),url(../img/hero.webp);
-        background-size: cover;
-        height: 70vh;
-        background-position: center;
-        position: relative;
-    
-    
         .content{
-            position: absolute;
             top:50%;
             left:50%;
             transform: translate(-50%,-50%);
-            text-align: center;
             width:100%;
-            h1{
-                font-size:2.7rem;
-            }
+
+            h1{font-size:2.7rem;}
     
-            p{
-               text-align: center;
-               margin:0rem 0;
-            }
+            p{margin:0;}
     
-            button{
-                @include button();
-            }
+            button{@include button();}
         }
     }
-    
-}
-  
 
+    
+    .service{
+        margin:2rem 0;
+        padding:0.9rem;
+    
+        h2{
+            font-size:3rem;
+            
+        }
+        .service-conteiner{
+            gap: 50px;
+        }
+    
+        .service-conteiner h2{
+            font-size: 2rem;
+        }
+
+        .grid-item {
+            padding:2rem 0;
+        }
+        
+    
+        
+    }
+
+}
 
 
 
