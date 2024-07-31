@@ -38,7 +38,30 @@ $color:(
     height: 70vh;
     background-position: center;
     position: relative;
+;
+}
 
+@mixin content(){
+    .content{
+        position: absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-20%);
+        color: color(--white--color);
+        display: flex;
+        align-items: center;
+        flex-direction:column;
+        width:100%;
+        h1{font-size: 5.7rem;}
+
+        p{
+           text-align: center;
+           padding:2rem 0;
+           font-size:1.5rem;
+        }
+
+        button{@include button();}
+    }
 }
   
 *{
@@ -72,26 +95,8 @@ h2{text-align: center;}
     background:linear-gradient(rgba(0, 0, 0, 0.300),rgba(0, 0, 0, 0.300)),url(../img/hero.webp);
     @include fullImg();
 
-
-    .content{
-        position: absolute;
-        top:50%;
-        left:50%;
-        transform: translate(-50%,-20%);
-        color: color(--white--color);
-        display: flex;
-        align-items: center;
-        flex-direction:column;
-        h1{font-size: 5.7rem;}
-
-        p{
-           text-align: center;
-           padding:2rem 0;
-           font-size:1.5rem;
-        }
-
-        button{@include button();}
-    }
+    @include content();
+ 
 }
 
 /**********************/
@@ -106,9 +111,9 @@ h2{text-align: center;}
     z-index:20;
 }
 .navbar{
-    //background:color(--white--color);
+    background:color(--white--color);
     z-index: 1;
-    background: yellowgreen;
+    
 }
 
 .navbar .logo{
@@ -188,13 +193,13 @@ h2{text-align: center;}
 }
 
 /**********************/
-     /*MOBILE*/
+     /*SERVICE*/
 /**********************/
 
 .service{
     margin:2rem 0;
     text-align: center;
-    @include row();
+    
 
     h2{
         font-size:3.2rem;
@@ -206,6 +211,7 @@ h2{text-align: center;}
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         gap: 20px;
+        @include row();
     }
 
     .service-conteiner h2{
@@ -224,10 +230,12 @@ h2{text-align: center;}
 /**********************/
 
 .agenda{
-    background: yellow;
-    h1{
-        color:red;
-    }
+    background:linear-gradient(rgba(0, 0, 0, 0.105),rgba(0, 0, 0, 0.105)), url(../img/design-sem-nome-5-YD0pZabB0GTZ9LB3.webp);
+    @include fullImg();
+
+    @include content();
+
+    margin:10rem 0 0 0;
 }
 
 /**********************/
@@ -239,6 +247,21 @@ h2{text-align: center;}
         padding:1rem 1.5rem;
         font-size:0.8rem;
        
+    }
+
+    @mixin content(){
+        .content{
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            width:100%;
+
+            h1{font-size:2.7rem;}
+    
+            p{margin:0;}
+    
+            button{@include button();}
+        }
     }
     .navbar{padding:0 1rem;}
 
@@ -262,24 +285,13 @@ h2{text-align: center;}
     #toggle {display:block;}
 
     .hero{
-        .content{
-            top:50%;
-            left:50%;
-            transform: translate(-50%,-50%);
-            width:100%;
-
-            h1{font-size:2.7rem;}
-    
-            p{margin:0;}
-    
-            button{@include button();}
-        }
+        @include content(); 
     }
 
     
     .service{
         margin:2rem 0;
-        padding:0.9rem;
+       
     
         h2{
             font-size:3rem;
@@ -287,6 +299,7 @@ h2{text-align: center;}
         }
         .service-conteiner{
             gap: 50px;
+            padding:0.9rem;
         }
     
         .service-conteiner h2{
@@ -297,8 +310,14 @@ h2{text-align: center;}
             padding:2rem 0;
         }
         
+    }
+
+
+    .agenda{
+        background:linear-gradient(rgba(0, 0, 0, 0.105),rgba(0, 0, 0, 0.105)), url(../img/design-sem-nome-5-YD0pZabB0GTZ9LB3.webp);
+        @include fullImg();
     
-        
+        @include content();
     }
 
 }
