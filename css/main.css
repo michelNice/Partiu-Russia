@@ -21,10 +21,6 @@ ul {
   list-style: none;
 }
 
-h2 {
-  text-align: center;
-}
-
 /**********************/
 /*HERO AND NAV*/
 /**********************/
@@ -60,12 +56,12 @@ h2 {
   font-size: 1.5rem;
 }
 .hero .content button {
-  padding: 1rem 2rem;
+  padding: 1.1rem 2.3rem;
   color: #fff;
   font-size: 1.2rem;
   background: rgb(173, 0, 0);
   border: 0;
-  border-radius: 0.3rem;
+  border-radius: 0.5rem;
   cursor: pointer;
   position: relative;
   z-index: 10;
@@ -188,7 +184,7 @@ h2 {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
   margin: 0 auto;
-  max-width: 75rem;
+  max-width: 77rem;
 }
 .service .service-conteiner h2 {
   font-size: 2rem;
@@ -231,17 +227,70 @@ h2 {
   font-size: 1.5rem;
 }
 .agenda .content button {
-  padding: 1rem 2rem;
+  padding: 1.1rem 2.3rem;
   color: #fff;
   font-size: 1.2rem;
   background: rgb(173, 0, 0);
   border: 0;
-  border-radius: 0.3rem;
+  border-radius: 0.5rem;
   cursor: pointer;
   position: relative;
   z-index: 10;
 }
 .agenda .content button:hover {
+  background: rgb(11, 125, 3);
+}
+
+.study {
+  display: flex;
+  justify-content: center;
+  margin: 7rem 0 0 0;
+}
+.study .study-conteiner {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 77rem;
+  position: relative;
+}
+.study .study-conteiner .card {
+  width: 48%;
+  margin: 0 0.4rem;
+}
+.study .study-conteiner .card img {
+  width: 100%;
+  height: auto;
+  cursor: zoom-in;
+}
+.study .study-conteiner .card .card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: left;
+  margin: 2rem 0;
+}
+.study .study-conteiner .card .card-content h3 {
+  font-size: 2.3rem;
+  color: rgb(23, 23, 23);
+}
+.study .study-conteiner .card .card-content p {
+  padding: 2rem 0;
+  font-size: 1.2rem;
+  color: rgb(93, 87, 94);
+}
+.study .study-conteiner .card .card-content button {
+  padding: 1.1rem 2.3rem;
+  color: #fff;
+  font-size: 1.2rem;
+  background: rgb(173, 0, 0);
+  border: 0;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  position: relative;
+  z-index: 10;
+}
+.study .study-conteiner .card .card-content button:hover {
   background: rgb(11, 125, 3);
 }
 
@@ -324,6 +373,50 @@ h2 {
     margin: 0;
   }
   .agenda .content button {
+    padding: 1rem 1.5rem;
+    font-size: 0.8rem;
+  }
+  .study {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0 0 0;
+    flex-direction: column;
+  }
+  .study .study-conteiner {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 77rem;
+    padding: 0 2rem;
+  }
+  .study .study-conteiner .card {
+    width: 100%;
+    margin: 0rem;
+  }
+  .study .study-conteiner .card img {
+    width: 100%;
+    height: auto;
+    cursor: zoom-in;
+  }
+  .study .study-conteiner .card .card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: left;
+    margin: 1rem 0;
+  }
+  .study .study-conteiner .card .card-content h3 {
+    font-size: 2.3rem;
+    color: rgb(23, 23, 23);
+  }
+  .study .study-conteiner .card .card-content p {
+    padding: 1rem 0;
+    font-size: 1.2rem;
+    color: rgb(93, 87, 94);
+  }
+  .study .study-conteiner .card .card-content button {
     padding: 1rem 1.5rem;
     font-size: 0.8rem;
   }
