@@ -274,7 +274,6 @@ ul {
   left: 0;
   height: 100vh;
   width: 100%;
-  background: rgba(0, 0, 0, 0.6156862745);
   z-index: 100;
   display: none;
   object-fit: cover;
@@ -282,16 +281,15 @@ ul {
 .study .study-conteiner .popup-image span {
   position: absolute;
   top: 0;
-  right: 0;
+  right: 10px;
   cursor: pointer;
   color: #fff;
   z-index: 100;
-  font-size: 2rem;
-  padding: 0.5rem 1.1rem;
-  color: #fff;
+  font-size: 1rem;
+  background: red;
 }
 .study .study-conteiner .popup-image span:hover {
-  background: rgba(221, 219, 219, 0.4039215686);
+  color: red;
 }
 .study .study-conteiner .popup-image img {
   position: absolute;
@@ -299,8 +297,8 @@ ul {
   left: 50%;
   transform: translate(-50%, -50%);
   object-fit: cover;
-  width: 100%;
-  max-width: 68vw; /* Adjusts the max-width based on viewport width */
+  width: 10%;
+  max-width: 10vw; /* Adjusts the max-width based on viewport width */
   height: auto; /* Maintains aspect ratio */
 }
 .study .study-conteiner .card img {
@@ -452,4 +450,4 @@ ul {
   }
 }
 
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=main.csss.map */

@@ -133,7 +133,7 @@ ul{list-style:none;}
         cursor: pointer;
         font-weight: 500;
         color: color(--black--color);
-        font-size:1.2rem;
+        font-size:1.1rem;
     }
 
     .none_underline:last-child{list-style: none;}
@@ -197,7 +197,7 @@ ul{list-style:none;}
 /**********************/
 
 .service{
-    margin:2rem 0;
+    margin:-0.5rem 0;
     text-align: center;
     
 
@@ -250,11 +250,67 @@ ul{list-style:none;}
         flex-wrap: wrap;
         @include row();
         position: relative;
+       
     }
 
     .study-conteiner .card{
         width:48%;
         margin:0 .4rem;
+    }
+
+    .study-conteiner .popup-image{
+        position:fixed;
+        top:0;
+        left:0;
+        height:100vh;
+        width:100%;
+        background:#0000009d;
+        z-index: 100;
+        display:none;
+        object-fit: cover;
+    }
+
+
+
+    .study-conteiner .popup-image span{
+        position: absolute;
+        top:0;
+        right:0;
+        cursor: pointer;
+        color:color(--white--color);
+        z-index:100;
+        font-size:2rem;
+        padding:0.5rem 1.1rem;
+        color: color(--white--color);
+    
+      
+        &:hover{
+            background:#dddbdb67;
+            
+        }
+    }
+
+    
+    /*
+    .study-conteiner .popup-image img{
+        position: absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+        object-fit: cover;
+        width:65rem;
+    }
+    */
+
+    .study-conteiner .popup-image img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        object-fit: cover;
+        width:100%;
+        max-width:68vw; /* Adjusts the max-width based on viewport width */
+        height: auto; /* Maintains aspect ratio */
     }
 
     .study-conteiner .card img{
@@ -271,14 +327,15 @@ ul{list-style:none;}
         margin:2rem 0;
     }
     .study-conteiner .card .card-content h3{
-        font-size: 2.3rem;
-        color:rgb(23,23,23);
+        font-size: 2.1rem;
+        color:rgba(23, 23, 23, 0.836);
     }
 
     .study-conteiner .card .card-content p{
-        padding: 2rem 0;
+        padding: 1rem 0;
         font-size:1.2rem;
-        color:rgb(93,87,94)
+        color:rgb(93,87,94);
+        
     }
     
 
@@ -377,51 +434,39 @@ ul{list-style:none;}
 
 
     .study{
-
-        display: flex;
-        justify-content: center;
-        margin: 2rem 0 0 0;
+        margin: 3rem 0;
         flex-direction: column;
+        //padding:1rem 0;
+    
         .study-conteiner{
-            display:flex;
-            justify-content: center;
-            flex-wrap: wrap;
             flex-direction: column;
-            @include row();
             padding:0 2rem;
+            
+        }
+
+        .study-conteiner .popup-image img{
+            width:100%;
 
         }
     
         .study-conteiner .card{
             width:100%;
-            margin:0rem;
+            margin:0;
         }
     
         .study-conteiner .card img{
             width:100%;
-            height:auto;
-            cursor: zoom-in;
-        }
-    
-        .study-conteiner .card .card-content{
-            display: flex;
-            flex-direction: column;
-            align-items:start;
-            justify-content: left;
-            margin:1rem 0;
+
         }
         .study-conteiner .card .card-content h3{
-            font-size: 2.3rem;
-            color:rgb(23,23,23);
+            font-size:1.5rem;
         }
     
         .study-conteiner .card .card-content p{
-            padding: 1rem 0;
-            font-size:1.2rem;
-            color:rgb(93,87,94)
+            padding:1rem 0;
+            font-size:1rem;
         }
         
-    
         .study-conteiner .card .card-content button{
             @include button();
         }
@@ -430,6 +475,7 @@ ul{list-style:none;}
     }
 
 }
+
 
 
 
