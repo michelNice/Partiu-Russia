@@ -245,16 +245,6 @@ ul {
   display: flex;
   justify-content: center;
   margin: 7rem 0 0 0;
-  /*
-  .study-conteiner .popup-image img{
-      position: absolute;
-      top:50%;
-      left:50%;
-      transform: translate(-50%,-50%);
-      object-fit: cover;
-      width:65rem;
-  }
-  */
 }
 .study .study-conteiner {
   display: flex;
@@ -277,7 +267,6 @@ ul {
   background: rgba(0, 0, 0, 0.6156862745);
   z-index: 100;
   display: none;
-  object-fit: cover;
 }
 .study .study-conteiner .popup-image span {
   position: absolute;
@@ -300,8 +289,8 @@ ul {
   transform: translate(-50%, -50%);
   object-fit: cover;
   width: 100%;
-  max-width: 68vw; /* Adjusts the max-width based on viewport width */
-  height: auto; /* Maintains aspect ratio */
+  max-width: 68vw;
+  height: auto;
 }
 .study .study-conteiner .card img {
   width: 100%;
@@ -430,7 +419,8 @@ ul {
     padding: 0 2rem;
   }
   .study .study-conteiner .popup-image img {
-    width: 100%;
+    /*width:100%;*/
+    max-width: 100vh;
   }
   .study .study-conteiner .card {
     width: 100%;

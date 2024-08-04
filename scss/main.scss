@@ -267,7 +267,6 @@ ul{list-style:none;}
         background:#0000009d;
         z-index: 100;
         display:none;
-        object-fit: cover;
     }
 
 
@@ -289,19 +288,6 @@ ul{list-style:none;}
             
         }
     }
-
-    
-    /*
-    .study-conteiner .popup-image img{
-        position: absolute;
-        top:50%;
-        left:50%;
-        transform: translate(-50%,-50%);
-        object-fit: cover;
-        width:65rem;
-    }
-    */
-
     .study-conteiner .popup-image img {
         position: absolute;
         top: 50%;
@@ -309,8 +295,8 @@ ul{list-style:none;}
         transform: translate(-50%, -50%);
         object-fit: cover;
         width:100%;
-        max-width:68vw; /* Adjusts the max-width based on viewport width */
-        height: auto; /* Maintains aspect ratio */
+        max-width:68vw; 
+        height: auto; 
     }
 
     .study-conteiner .card img{
@@ -445,8 +431,8 @@ ul{list-style:none;}
         }
 
         .study-conteiner .popup-image img{
-            width:100%;
-
+            /*width:100%;*/
+            max-width:100vh;
         }
     
         .study-conteiner .card{
