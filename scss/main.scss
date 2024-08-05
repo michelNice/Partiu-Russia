@@ -63,6 +63,11 @@ $color:(
         button{@include button();}
     }
 }
+
+@mixin flex-ult{
+    display: flex;
+    justify-content: center;
+}
   
 *{
     padding:0;
@@ -121,7 +126,7 @@ ul{list-style:none;}
 }
 
 .main-nav{
-    z-index:-1;
+    z-index:1;
     li{
         display:inline-block;
         padding:0.8rem 1.8rem;
@@ -349,24 +354,27 @@ ul{list-style:none;}
     .form-section label {
         display: block;
         margin-bottom: 0.5rem;
-        font-size: 1.1rem; 
+       
     }
 
     .form-section input {
         display: block;
         width:400px;
-        padding: 0.9rem;
+        padding: 0.8rem;
         margin-bottom: 1rem;
         border:1px solid #fff;
-
+        font-size: 1.2rem; 
     }
 
     .form-section button {
         @include button();
     }
+
+    input::-webkit-input-placeholder {
+        font-size:1rem;
+      }
+      
 }
-
-
 
 /**********************/
      /*MOBILE*/
@@ -422,7 +430,6 @@ ul{list-style:none;}
     .service{
         margin:2rem 0;
        
-    
         h2{
             font-size:3rem;
             
@@ -490,43 +497,24 @@ ul{list-style:none;}
 
 
     .subscript{
-        background: url(../img/desktop.avif);
-        height:47vh;
-        background-position: center;
-        background-size:cover;
-        margin:5rem 0;
-        color:color(--white--color);
+
+        h2{
+            font-size:3.6rem;
+        }
+        
+      
         .form-section {
-        position: static;
-        text-align: left; 
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin:1.5rem  0;
-        color:color(--white--color);
+            margin:1rem  0;
     
         }
 
         
-    
-        .form-section label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-size: 1.1rem; 
-        }
-    
         .form-section input {
-            display: block;
             width:300px;
-            padding: 0.9rem;
-            margin-bottom: 1rem;
-            border:1px solid #fff;
-    
+            
         }
     
-        .form-section button {
-            @include button();
-        }
+       
     }
     
 

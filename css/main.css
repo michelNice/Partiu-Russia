@@ -94,7 +94,7 @@ ul {
 }
 
 .main-nav {
-  z-index: -1;
+  z-index: 1;
 }
 .main-nav li {
   display: inline-block;
@@ -346,14 +346,14 @@ ul {
 .subscript .form-section label {
   display: block;
   margin-bottom: 0.5rem;
-  font-size: 1.1rem;
 }
 .subscript .form-section input {
   display: block;
   width: 400px;
-  padding: 0.9rem;
+  padding: 0.8rem;
   margin-bottom: 1rem;
   border: 1px solid #fff;
+  font-size: 1.2rem;
 }
 .subscript .form-section button {
   padding: 1.1rem 2.3rem;
@@ -368,6 +368,9 @@ ul {
 }
 .subscript .form-section button:hover {
   background: rgb(11, 125, 3);
+}
+.subscript input::-webkit-input-placeholder {
+  font-size: 1rem;
 }
 
 /**********************/
@@ -481,38 +484,14 @@ ul {
     padding: 1rem 1.5rem;
     font-size: 0.8rem;
   }
-  .subscript {
-    background: url(../img/desktop.avif);
-    height: 47vh;
-    background-position: center;
-    background-size: cover;
-    margin: 5rem 0;
-    color: #fff;
+  .subscript h2 {
+    font-size: 3.6rem;
   }
   .subscript .form-section {
-    position: static;
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 1.5rem 0;
-    color: #fff;
-  }
-  .subscript .form-section label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-size: 1.1rem;
+    margin: 1rem 0;
   }
   .subscript .form-section input {
-    display: block;
     width: 300px;
-    padding: 0.9rem;
-    margin-bottom: 1rem;
-    border: 1px solid #fff;
-  }
-  .subscript .form-section button {
-    padding: 1rem 1.5rem;
-    font-size: 0.8rem;
   }
 }
 
