@@ -5,6 +5,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  outline: none;
 }
 
 html {
@@ -26,7 +27,7 @@ ul {
 /**********************/
 .row {
   margin: 0 auto;
-  max-width: 75rem;
+  max-width: 77rem;
 }
 
 .hero {
@@ -77,8 +78,8 @@ ul {
   display: flex;
   justify-content: space-between;
   padding: 1rem 0;
-  position: relative;
   z-index: 20;
+  position: relative;
 }
 
 .navbar {
@@ -287,10 +288,8 @@ ul {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  object-fit: cover;
   width: 100%;
   max-width: 68vw;
-  height: auto;
 }
 .study .study-conteiner .card img {
   width: 100%;
@@ -301,7 +300,6 @@ ul {
   display: flex;
   flex-direction: column;
   align-items: start;
-  justify-content: left;
   margin: 2rem 0;
 }
 .study .study-conteiner .card .card-content h3 {
@@ -325,6 +323,50 @@ ul {
   z-index: 10;
 }
 .study .study-conteiner .card .card-content button:hover {
+  background: rgb(11, 125, 3);
+}
+
+.subscript {
+  background: url(../img/desktop.avif);
+  height: 47vh;
+  background-position: center;
+  background-size: cover;
+  margin: 5rem 0;
+  color: #fff;
+}
+.subscript .form-section {
+  position: static;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1.5rem 0;
+  color: #fff;
+}
+.subscript .form-section label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+.subscript .form-section input {
+  display: block;
+  width: 400px;
+  padding: 0.9rem;
+  margin-bottom: 1rem;
+  border: 1px solid #fff;
+}
+.subscript .form-section button {
+  padding: 1.1rem 2.3rem;
+  color: #fff;
+  font-size: 1.2rem;
+  background: rgb(173, 0, 0);
+  border: 0;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  position: relative;
+  z-index: 10;
+}
+.subscript .form-section button:hover {
   background: rgb(11, 125, 3);
 }
 
@@ -388,7 +430,6 @@ ul {
     padding: 2rem 0;
   }
   .agenda {
-    background: linear-gradient(rgba(0, 0, 0, 0.105), rgba(0, 0, 0, 0.105)), url(../img/design-sem-nome-5-YD0pZabB0GTZ9LB3.webp);
     background-size: cover;
     height: 70vh;
     background-position: center;
@@ -413,14 +454,14 @@ ul {
   .study {
     margin: 3rem 0;
     flex-direction: column;
+    padding: 1rem 0;
   }
   .study .study-conteiner {
     flex-direction: column;
     padding: 0 2rem;
   }
   .study .study-conteiner .popup-image img {
-    /*width:100%;*/
-    max-width: 100vh;
+    max-width: 100vw;
   }
   .study .study-conteiner .card {
     width: 100%;
@@ -437,6 +478,39 @@ ul {
     font-size: 1rem;
   }
   .study .study-conteiner .card .card-content button {
+    padding: 1rem 1.5rem;
+    font-size: 0.8rem;
+  }
+  .subscript {
+    background: url(../img/desktop.avif);
+    height: 47vh;
+    background-position: center;
+    background-size: cover;
+    margin: 5rem 0;
+    color: #fff;
+  }
+  .subscript .form-section {
+    position: static;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1.5rem 0;
+    color: #fff;
+  }
+  .subscript .form-section label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+  }
+  .subscript .form-section input {
+    display: block;
+    width: 300px;
+    padding: 0.9rem;
+    margin-bottom: 1rem;
+    border: 1px solid #fff;
+  }
+  .subscript .form-section button {
     padding: 1rem 1.5rem;
     font-size: 0.8rem;
   }
