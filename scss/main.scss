@@ -329,7 +329,7 @@ ul{list-style:none;}
     height:47vh;
     background-position: center;
     background-size:cover;
-    margin:5rem 0;
+    margin:3rem 0;
     color:color(--white--color);
     .form-section {
     position: static;
@@ -365,6 +365,9 @@ ul{list-style:none;}
 
 
 .instagram {
+    font-family: 'Roboto', 'Open Sans', 'Helvetica', 'Arial', sans-serif;
+    color: color(--black--color);
+    margin:2rem 0;
     .instagram-conteiner{
         display:flex;
         @include row();
@@ -374,11 +377,46 @@ ul{list-style:none;}
             padding:0 .7rem;
             margin:2rem 0;
         }
-        
-        
+    }
+
+    h2{
+        font-weight: 500;
     }
 
     button{@include button();}
+}
+
+
+.footer{
+    background: color(--black--color);
+    padding:0.7rem;
+    justify-content:start;
+    display: flex;
+    a i{
+       color: color(--white--color); 
+       margin:0 1rem;
+       font-size:1.5rem;
+    }
+
+    a i:hover{
+        color:color(--grey--color);
+    }
+
+    a .fa-facebook-f{
+        background:color(--white--color);
+        color:color(--black--color);
+        padding:.6rem;
+        border-radius:50px;
+        height:27px;
+        width:27px;
+        font-size:1.1rem;
+
+        &:hover{
+            background:color(--grey--color);
+            color:color(--black--color);
+        }
+       
+    }
 }
 
 /**********************/

@@ -331,7 +331,7 @@ ul {
   height: 47vh;
   background-position: center;
   background-size: cover;
-  margin: 5rem 0;
+  margin: 3rem 0;
   color: #fff;
 }
 .subscript .form-section {
@@ -373,6 +373,11 @@ ul {
   font-size: 1rem;
 }
 
+.instagram {
+  font-family: "Roboto", "Open Sans", "Helvetica", "Arial", sans-serif;
+  color: rgb(0, 0, 0);
+  margin: 2rem 0;
+}
 .instagram .instagram-conteiner {
   display: flex;
   margin: 0 auto;
@@ -383,6 +388,9 @@ ul {
   width: 100%;
   padding: 0 0.7rem;
   margin: 2rem 0;
+}
+.instagram h2 {
+  font-weight: 500;
 }
 .instagram button {
   padding: 1.1rem 2.3rem;
@@ -397,6 +405,34 @@ ul {
 }
 .instagram button:hover {
   background: rgb(11, 125, 3);
+}
+
+.footer {
+  background: rgb(0, 0, 0);
+  padding: 0.7rem;
+  justify-content: start;
+  display: flex;
+}
+.footer a i {
+  color: #fff;
+  margin: 0 1rem;
+  font-size: 1.5rem;
+}
+.footer a i:hover {
+  color: rgb(34, 32, 32);
+}
+.footer a .fa-facebook-f {
+  background: #fff;
+  color: rgb(0, 0, 0);
+  padding: 0.6rem;
+  border-radius: 50px;
+  height: 27px;
+  width: 27px;
+  font-size: 1.1rem;
+}
+.footer a .fa-facebook-f:hover {
+  background: rgb(34, 32, 32);
+  color: rgb(0, 0, 0);
 }
 
 /**********************/
