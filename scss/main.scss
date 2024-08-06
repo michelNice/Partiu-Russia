@@ -389,33 +389,36 @@ ul{list-style:none;}
 
 .footer{
     background: color(--black--color);
-    padding:0.7rem;
-    justify-content:start;
-    display: flex;
-    a i{
-       color: color(--white--color); 
-       margin:0 1rem;
-       font-size:1.5rem;
-    }
-
-    a i:hover{
-        color:color(--grey--color);
-    }
-
-    a .fa-facebook-f{
-        background:color(--white--color);
-        color:color(--black--color);
-        padding:.6rem;
-        border-radius:50px;
-        height:27px;
-        width:27px;
-        font-size:1.1rem;
-
-        &:hover{
-            background:color(--grey--color);
-            color:color(--black--color);
-        }
-       
+    padding:1rem 0;
+    .icon-conteiner{
+        @include row();
+        display:flex;
+        justify-content:end;
+        a i{
+            color: color(--white--color); 
+            margin:0 1rem;
+            font-size:1.8rem;
+            float:left;
+         }
+         a i:hover{
+             color:color(--grey--color);
+         }
+     
+         a .fa-facebook-f{
+             background:color(--white--color);
+             color:color(--black--color);
+             padding:.6rem;
+             border-radius:50px;
+             height:25px;
+             width:25px;
+             font-size:1.1rem;
+     
+             &:hover{
+                 background:color(--grey--color);
+                 color:color(--black--color);
+             }
+            
+         }
     }
 }
 

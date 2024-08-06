@@ -409,28 +409,33 @@ ul {
 
 .footer {
   background: rgb(0, 0, 0);
-  padding: 0.7rem;
-  justify-content: start;
-  display: flex;
+  padding: 1rem 0;
 }
-.footer a i {
+.footer .icon-conteiner {
+  margin: 0 auto;
+  max-width: 77rem;
+  display: flex;
+  justify-content: end;
+}
+.footer .icon-conteiner a i {
   color: #fff;
   margin: 0 1rem;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
+  float: left;
 }
-.footer a i:hover {
+.footer .icon-conteiner a i:hover {
   color: rgb(34, 32, 32);
 }
-.footer a .fa-facebook-f {
+.footer .icon-conteiner a .fa-facebook-f {
   background: #fff;
   color: rgb(0, 0, 0);
   padding: 0.6rem;
   border-radius: 50px;
-  height: 27px;
-  width: 27px;
+  height: 25px;
+  width: 25px;
   font-size: 1.1rem;
 }
-.footer a .fa-facebook-f:hover {
+.footer .icon-conteiner a .fa-facebook-f:hover {
   background: rgb(34, 32, 32);
   color: rgb(0, 0, 0);
 }
