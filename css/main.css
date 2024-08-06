@@ -9,7 +9,7 @@
 }
 
 html {
-  font-family: "Lato", sans-serif;
+  font-family: "Roboto", "Open Sans", "Helvetica", "Arial", sans-serif;
   color: rgb(34, 32, 32);
   font-size: 1rem;
 }
@@ -88,8 +88,8 @@ ul {
 }
 
 .navbar .logo {
-  color: rgb(34, 32, 32);
-  font-size: 1.7rem;
+  color: rgba(23, 23, 23, 0.836);
+  font-size: 1.3rem;
   font-weight: 800;
 }
 
@@ -104,7 +104,7 @@ ul {
 .main-nav li a:link {
   cursor: pointer;
   font-weight: 500;
-  color: rgb(0, 0, 0);
+  color: rgba(23, 23, 23, 0.836);
   font-size: 1.1rem;
 }
 .main-nav .none_underline:last-child {
@@ -178,7 +178,7 @@ ul {
 .service h2 {
   font-size: 3.2rem;
   padding: 1rem 0;
-  font-weight: 600;
+  font-weight: 500;
 }
 .service .service-conteiner {
   display: grid;
@@ -307,7 +307,7 @@ ul {
   color: rgba(23, 23, 23, 0.836);
 }
 .study .study-conteiner .card .card-content p {
-  padding: 1rem 0;
+  padding: 1.5rem 0;
   font-size: 1.2rem;
   color: rgb(93, 87, 94);
 }
@@ -374,7 +374,6 @@ ul {
 }
 
 .instagram {
-  font-family: "Roboto", "Open Sans", "Helvetica", "Arial", sans-serif;
   color: rgb(0, 0, 0);
   margin: 2rem 0;
 }
@@ -409,7 +408,7 @@ ul {
 
 .footer {
   background: rgb(0, 0, 0);
-  padding: 1rem 0;
+  padding: 0.7rem 0;
 }
 .footer .icon-conteiner {
   margin: 0 auto;
@@ -420,24 +419,11 @@ ul {
 .footer .icon-conteiner a i {
   color: #fff;
   margin: 0 1rem;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   float: left;
 }
 .footer .icon-conteiner a i:hover {
   color: rgb(34, 32, 32);
-}
-.footer .icon-conteiner a .fa-facebook-f {
-  background: #fff;
-  color: rgb(0, 0, 0);
-  padding: 0.6rem;
-  border-radius: 50px;
-  height: 25px;
-  width: 25px;
-  font-size: 1.1rem;
-}
-.footer .icon-conteiner a .fa-facebook-f:hover {
-  background: rgb(34, 32, 32);
-  color: rgb(0, 0, 0);
 }
 
 /**********************/
@@ -572,6 +558,12 @@ ul {
   .instagram button {
     padding: 1rem 1.5rem;
     font-size: 0.8rem;
+  }
+  .footer {
+    padding: 2rem 0;
+  }
+  .footer .icon-conteiner {
+    justify-content: start;
   }
 }
 
