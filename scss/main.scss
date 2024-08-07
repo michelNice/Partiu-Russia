@@ -374,6 +374,8 @@ ul{list-style:none;}
 }
 
 
+
+
 .footer{
     background: color(--black--color);
     padding:.7rem 0;
@@ -399,6 +401,7 @@ ul{list-style:none;}
 /**********************/
 
 @media(max-width:80rem){
+    
     @mixin button(){
         padding:1rem 1.5rem;
         font-size:0.8rem;
@@ -431,10 +434,8 @@ ul{list-style:none;}
             display:block;
             padding:.6rem;
         }
-        li a:visited{
-            font-size:0.2rem;
+        li a:visited{font-size:0.2rem;}
 
-        }
         li a:hover{border:0;}
     }
 
@@ -444,7 +445,7 @@ ul{list-style:none;}
 
     
     .service{
-        margin:2rem 0;
+        //margin:2rem 0;
        
         h2{font-size:3rem;}
 
@@ -465,7 +466,7 @@ ul{list-style:none;}
     
         @include content();
     }
-
+    
     .study{
         margin: 3rem 0;
         flex-direction: column;
@@ -497,7 +498,7 @@ ul{list-style:none;}
     }
 
 
-
+    
     .subscript{
 
         h2{font-size:3.3rem;}
@@ -511,7 +512,7 @@ ul{list-style:none;}
        
     }
 
-
+    
     
 .instagram {
     .instagram-conteiner{
@@ -536,11 +537,6 @@ ul{list-style:none;}
     padding:2rem 0;
     .icon-conteiner{justify-content:start;}
     }
+
+    
 }
-
-
-
-
-
-
-
