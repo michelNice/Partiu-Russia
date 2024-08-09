@@ -1,17 +1,3 @@
-/*document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('.clickable-image').forEach(image => {
-        image.onclick = () => {
-            document.querySelector('.popup-image').style.display = 'block';
-            document.querySelector('.popup-image img').src = image.getAttribute('src');
-        }
-    });
-
-    document.querySelector('.popup-image span').onclick = () => {
-        document.querySelector('.popup-image').style.display = 'none';
-    };
-});
-*/
-
 document.addEventListener('DOMContentLoaded', () => {
     // Function to show the popup and prevent scrolling
     const showPopup = (src) => {
@@ -20,15 +6,12 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelector('.popup-image img').src = src;
         document.body.style.overflow = 'hidden'; // Prevent scrolling
     };
-
-    // Function to hide the popup and allow scrolling
     const hidePopup = () => {
         const popup = document.querySelector('.popup-image');
         popup.style.display = 'none';
-        document.body.style.overflow = ''; // Allow scrolling
+        document.body.style.overflow = ''; 
     };
 
-    // Set up click events for images
     document.querySelectorAll('.clickable-image').forEach(image => {
         image.onclick = () => {
             showPopup(image.getAttribute('src'));
@@ -48,6 +31,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 });
+
+
+
+
+
 
 
 
