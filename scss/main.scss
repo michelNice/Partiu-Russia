@@ -544,34 +544,36 @@ ul{list-style:none;}
 
 
 
-@import url('https://fonts.googleapis.com/css?family=Roboto');
-body{
-    margin: 0;
-     padding: 0;
-     font-family: 'Roboto', sans-serif;
-}
+
  .navigation {
-     height: 55px;
-     background: linear-gradient(45deg, #4199fe, #74b4fe);
+     height: 65px;
+     background:color(--white--color);
+     z-index:999;
+     position: fixed;
+     top:0;
+     left:0;
+     left:0;
+     width:100%;
+     
 }
  .brand {
      position: absolute;
      padding-left: 20px;
      float: left;
-     line-height: 55px;
+     line-height: 65px;
      text-transform: uppercase;
      font-size: 1.4em;
 }
  .brand a, .brand a:visited {
-     color: #ffffff;
+     color:color(--grey--color);
      text-decoration: none;
 }
  .nav-container {
-     max-width: 1000px;
-     margin: 0 auto;
+    @include row();
 }
  nav {
      float: right;
+     text-align: right;
 }
  nav ul {
      list-style: none;
@@ -579,28 +581,29 @@ body{
      padding: 0;
 }
  nav ul li {
-     float: left;
+     float: right;
      position: relative;
 }
  nav ul li a,nav ul li a:visited {
      display: block;
      padding: 0 20px;
-     line-height: 55px;
-     color: #fff;
-     background: #262626 ;
+     line-height: 65px;
+     color:color(--grey--color);
+     //background: #262626 ;
      text-decoration: none;
 }
  nav ul li a{
-     background: transparent;
-     color: #FFF;
+     //background: transparent;
+     color:color(--grey--color);
 }
- nav ul li a:hover, nav ul li a:visited:hover {
-     background: #2581DC;
-     color: #ffffff;
+ a:hover{
+     text-decoration:1px  underline color(--grey--color);
 }
+/*
  .navbar-dropdown li a{
      background: #2581DC;
 }
+     */
  nav ul li a:not(:only-child):after, nav ul li a:visited:not(:only-child):after {
      padding-left: 4px;
      content: ' \025BE';
@@ -612,6 +615,7 @@ body{
      padding: 15px;
      line-height: 20px;
 }
+/*
  .navbar-dropdown {
      position: absolute;
      display: none;
@@ -626,7 +630,7 @@ body{
      top: 0;
      right: 0;
      background: transparent;
-     height: 55px;
+     height: 65px;
      width: 70px;
 }
  @media only screen and (max-width: 800px) {
@@ -635,7 +639,7 @@ body{
     }
      nav {
          width: 100%;
-         padding: 55px 0 15px;
+         padding: 65px 0 15px;
     }
      nav ul {
          display: none;
@@ -646,7 +650,7 @@ body{
      nav ul li a {
          padding: 15px;
          line-height: 20px;
-         background: #262626;
+         background:color(--white--color);
     }
      nav ul li ul li a {
          padding-left: 30px;
@@ -671,7 +675,7 @@ body{
      border-radius: 1px;
      height: 3px;
      width: 30px;
-     background: #ffffff;
+     background:color(--grey--color);
      position: absolute;
      display: block;
      content: '';

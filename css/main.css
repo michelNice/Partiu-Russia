@@ -2,7 +2,6 @@
 /**********************/
 /*SETTING UP*/
 /**********************/
-@import url("https://fonts.googleapis.com/css?family=Roboto");
 * {
   padding: 0;
   margin: 0;
@@ -555,38 +554,39 @@ ul {
     justify-content: start;
   }
 }
-body {
-  margin: 0;
-  padding: 0;
-  font-family: "Roboto", sans-serif;
-}
-
 .navigation {
-  height: 55px;
-  background: linear-gradient(45deg, #4199fe, #74b4fe);
+  height: 65px;
+  background: #fff;
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  left: 0;
+  width: 100%;
 }
 
 .brand {
   position: absolute;
   padding-left: 20px;
   float: left;
-  line-height: 55px;
+  line-height: 65px;
   text-transform: uppercase;
   font-size: 1.4em;
 }
 
 .brand a, .brand a:visited {
-  color: #ffffff;
+  color: rgb(34, 32, 32);
   text-decoration: none;
 }
 
 .nav-container {
-  max-width: 1000px;
   margin: 0 auto;
+  max-width: 77rem;
 }
 
 nav {
   float: right;
+  text-align: right;
 }
 
 nav ul {
@@ -596,33 +596,31 @@ nav ul {
 }
 
 nav ul li {
-  float: left;
+  float: right;
   position: relative;
 }
 
 nav ul li a, nav ul li a:visited {
   display: block;
   padding: 0 20px;
-  line-height: 55px;
-  color: #fff;
-  background: #262626;
+  line-height: 65px;
+  color: rgb(34, 32, 32);
   text-decoration: none;
 }
 
 nav ul li a {
-  background: transparent;
-  color: #FFF;
+  color: rgb(34, 32, 32);
 }
 
-nav ul li a:hover, nav ul li a:visited:hover {
-  background: #2581DC;
-  color: #ffffff;
+a:hover {
+  text-decoration: 1px underline rgb(34, 32, 32);
 }
 
-.navbar-dropdown li a {
-  background: #2581DC;
+/*
+ .navbar-dropdown li a{
+     background: #2581DC;
 }
-
+     */
 nav ul li a:not(:only-child):after, nav ul li a:visited:not(:only-child):after {
   padding-left: 4px;
   content: " ▾";
@@ -637,14 +635,14 @@ nav ul li ul li a {
   line-height: 20px;
 }
 
-.navbar-dropdown {
-  position: absolute;
-  display: none;
-  z-index: 1;
-  background: #fff;
-  box-shadow: 0 0 35px 0 rgba(0, 0, 0, 0.25);
+/*
+ .navbar-dropdown {
+     position: absolute;
+     display: none;
+     z-index: 1;
+     background: #fff;
+     box-shadow: 0 0 35px 0 rgba(0,0,0,0.25);
 }
-
 /* Mobile navigation */
 .nav-mobile {
   display: none;
@@ -652,7 +650,7 @@ nav ul li ul li a {
   top: 0;
   right: 0;
   background: transparent;
-  height: 55px;
+  height: 65px;
   width: 70px;
 }
 
@@ -662,7 +660,7 @@ nav ul li ul li a {
   }
   nav {
     width: 100%;
-    padding: 55px 0 15px;
+    padding: 65px 0 15px;
   }
   nav ul {
     display: none;
@@ -673,7 +671,7 @@ nav ul li ul li a {
   nav ul li a {
     padding: 15px;
     line-height: 20px;
-    background: #262626;
+    background: #fff;
   }
   nav ul li ul li a {
     padding-left: 30px;
@@ -700,7 +698,7 @@ nav ul li ul li a {
     border-radius: 1px;
     height: 3px;
     width: 30px;
-    background: #ffffff;
+    background: rgb(34, 32, 32);
     position: absolute;
     display: block;
     content: "";
