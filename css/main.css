@@ -259,7 +259,7 @@ ul {
   height: 100vh;
   width: 100%;
   background: rgba(0, 0, 0, 0.6156862745);
-  z-index: 100;
+  z-index: 99999;
   display: none;
 }
 .study .study-conteiner .popup-image span {
@@ -571,7 +571,8 @@ ul {
   float: left;
   line-height: 65px;
   text-transform: uppercase;
-  font-size: 1.4em;
+  font-size: 0.9em;
+  text-decoration: none;
 }
 
 .brand a, .brand a:visited {
@@ -612,7 +613,7 @@ nav ul li a {
   color: rgb(34, 32, 32);
 }
 
-a:hover {
+.nav-list a:hover {
   text-decoration: 1px underline rgb(34, 32, 32);
 }
 
@@ -655,6 +656,10 @@ nav ul li ul li a {
 }
 
 @media only screen and (max-width: 800px) {
+  .brand {
+    padding-left: 10px;
+    font-size: 0.7rem;
+  }
   .nav-mobile {
     display: block;
   }
@@ -676,13 +681,24 @@ nav ul li ul li a {
   nav ul li ul li a {
     padding-left: 30px;
   }
-  .navbar-dropdown {
-    position: static;
-  }
+  /*
+   .navbar-dropdown {
+       position: static;
+   }
+  */
 }
 @media only screen and (max-width: 800px) and (min-width: 800px) {
   .nav-list {
     display: block !important;
+  }
+  .brand {
+    position: absolute;
+    padding-left: 0;
+    float: left;
+    line-height: 65px;
+    text-transform: uppercase;
+    font-size: 0.3em;
+    text-decoration: none;
   }
 }
 @media only screen and (max-width: 800px) {
