@@ -23,8 +23,6 @@ $color:(
     border-radius: .5rem;
     cursor:pointer;
     position: relative;
-    //z-index:-1;
-    
     &:hover{background:color(--first--color);}
 }
 
@@ -83,7 +81,7 @@ a{text-decoration:none;}
 ul{list-style:none;}
 
 /**********************/
-     /*HERO AND NAV*/
+        /*HERO*/
 /**********************/
 
 .row{@include row();}
@@ -97,99 +95,156 @@ ul{list-style:none;}
 }
 
 /**********************/
-     /*NEVEGATION*/
-/**********************
+     /*HERO AND NAV*/
+/**********************/
 
-.flex-nav{
-    display:flex;
-    justify-content:space-between;
-    padding:1rem 0;
-    z-index:20;
-    position: relative;
+ .navigation {
+     height: 4.063rem;
+     background:color(--white--color);
+     z-index:999;
+     position: fixed;
+     top:0;
+     left:0;
+     left:0;
+     width:100%;
+     
 }
-.navbar{
-    background:color(--white--color);
-    z-index: 1;
+ .brand {
+     position: absolute;
+     padding-left:1.25rem;
+     float: left;
+     line-height: 4.063rem;
+     text-transform: uppercase;
+     font-size:.9em;
+     text-decoration: none;
+}
+
+
+ .brand a, .brand a:visited {
+     color:color(--grey--color);
+     text-decoration: none;
+}
+ .nav-container {@include row();}
+ 
+ nav {
+     float: right;
+     text-align: right;
+}
+ nav ul {
+     list-style: none;
+     margin: 0;
+     padding: 0;
+}
+ nav ul li {
+     float: right;
+     position: relative;
+}
+ nav ul li a,nav ul li a:visited {
+     display: block;
+     padding: 0 1.5rem;
+     line-height:4.036rem;
+     color:color(--grey--color);
+     text-decoration: none;
+}
+ nav ul li a{color:color(--grey--color);}
+
+ .nav-list a:hover{text-decoration:1px  underline color(--grey--color);}
+
+ nav ul li a:not(:only-child):after, nav ul li a:visited:not(:only-child):after {
+     padding-left: 4px;
+     content: ' \025BE';
+}
+ nav ul li ul li {min-width: 190px;}
+
+ nav ul li ul li a {
+     line-height:1.5rem;
+     padding: 0.938rem;
+}
+
+ .nav-mobile {
+     display: none;
+     position: absolute;
+     top: 0;
+     right: 0;
+     background: transparent;
+     height:4.063rem;
+     width:4.375rem;
+}
+ @media only screen and (max-width: 800px) {
+    .brand {
+      padding-left:.625rem;
+      font-size:.7rem;
+   }
+     .nav-mobile {display: block;}
+
+     nav {
+         width: 100%;
+         padding: 4.063rem 0 0.938rem;
+    }
+     nav ul {display: none;}
+
+     nav ul li {float: none;}
+
+     nav ul li a {
+         padding:0.938rem;
+         line-height:1.5rem;
+         background:color(--white--color);
+    }
+     nav ul li ul li a {padding-left: 30px;}
+
+ @media screen and (min-width:800px) {
+
+     .nav-list {display: block !important;}
     
+    .brand {
+        position: absolute;
+        padding-left:0;
+        float: left;
+        line-height: 65px;
+        text-transform: uppercase;
+        font-size:.3em;
+        text-decoration: none;
+   }
+   
+}
+ #navbar-toggle {
+     position: absolute;
+     left: 18px;
+     top: 15px;
+     cursor: pointer;
+     padding: 10px 35px 16px 0px;
+}
+ #navbar-toggle span, #navbar-toggle span:before, #navbar-toggle span:after {
+     cursor: pointer;
+     border-radius: 1px;
+     height: 3px;
+     width: 30px;
+     background:color(--grey--color);
+     position: absolute;
+     display: block;
+     content: '';
+     transition: all 300ms ease-in-out;
+}
+ #navbar-toggle span:before {top: -10px;}
+
+ #navbar-toggle span:after {bottom: -10px;}
+
+ #navbar-toggle.active span {background-color: transparent;}
+
+ #navbar-toggle.active span:before, #navbar-toggle.active span:after {top: 0;}
+
+ #navbar-toggle.active span:before {transform: rotate(45deg);}
+
+ #navbar-toggle.active span:after {transform: rotate(-45deg);}
+ 
 }
 
-.navbar .logo{
-    color:rgba(23, 23, 23, 0.836);
-    font-size: 1.3rem;
-    font-weight: 800;
-}
 
-.main-nav{
-    z-index:1;
-    li{
-        display:inline-block;
-        padding:0.8rem 1.8rem;
-    }
-    li a:visited,
-    li a:link{
-        cursor: pointer;
-        font-weight: 500;
-        color:rgba(23, 23, 23, 0.836);
-        font-size:1.1rem;
-    }
 
-    .none_underline:last-child{list-style: none;}
-
-    li a:hover,
-    li a:active{
-        color:rgb(26,26,26);
-        border-bottom:2px solid;
-    }
-}
-    
-
-#toggle {
-    display:none;
-    width: 30px;
-    height: 30px;
-    padding:20px 0 0 0;
-  }
-  
-  #toggle span:after,
-  #toggle span:before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: -9px;
-  }
-  #toggle span:after{
-    top: 9px;
-  }
-  #toggle span {
-    position: relative;
-    display: block;
-  }
-  
-  #toggle span,
-  #toggle span:after,
-  #toggle span:before {
-    width: 100%;
-    height: 2px;
-    background-color:color(--black--color);
-    transition: all 0.3s;
-    backface-visibility: hidden;
-    border-radius: 2px;
-  }
-  
-  #toggle.on span {background-color: transparent;}
-
-  #toggle.on span:before {transform: rotate(45deg) translate(5px, 5px);}
-
-  #toggle.on span:after {transform: rotate(-45deg) translate(7px, -8px);}
-
-  #toggle.on + #menu {
-    opacity: 1;
-    visibility: visible;
-}
 
 /**********************/
      /*SERVICE*/
-/**********************/
+/***********************/
 
 .service{
     margin:-0.5rem 0;
@@ -204,7 +259,7 @@ ul{list-style:none;}
     .service-conteiner{
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 20px;
+        gap: 1.5rem;
         @include row();
     }
 
@@ -214,7 +269,7 @@ ul{list-style:none;}
         width: 100%;
         height: auto;
         display: block;
-        margin-bottom:10px;
+        margin-bottom:.625rem;
     }
 }
 /**********************/
@@ -297,7 +352,6 @@ ul{list-style:none;}
         display: flex;
         flex-direction: column;
         align-items:start;
-        //justify-content: left;
         margin:2rem 0;
     }
     .study-conteiner .card .card-content h3{
@@ -504,13 +558,9 @@ ul{list-style:none;}
 
         h2{font-size:3.3rem;}
         
-      
         .form-section {margin:1rem  0;}
 
-        
         .form-section input {width:300px;}
-    
-       
     }
 
     
@@ -525,8 +575,6 @@ ul{list-style:none;}
             padding:0 .2rem;
            
         }
-        
-        
     }
 
     button{@include button();}
@@ -538,195 +586,4 @@ ul{list-style:none;}
     padding:2rem 0;
     .icon-conteiner{justify-content:start;}
     }
-
-    
 }
-
-
-
-
- .navigation {
-     height: 65px;
-     background:color(--white--color);
-     z-index:999;
-     position: fixed;
-     top:0;
-     left:0;
-     left:0;
-     width:100%;
-     
-}
- .brand {
-     position: absolute;
-     padding-left: 20px;
-     float: left;
-     line-height: 65px;
-     text-transform: uppercase;
-     font-size:.9em;
-     text-decoration: none;
-}
-
-
- .brand a, .brand a:visited {
-     color:color(--grey--color);
-     text-decoration: none;
-}
- .nav-container {
-    @include row();
-}
- nav {
-     float: right;
-     text-align: right;
-}
- nav ul {
-     list-style: none;
-     margin: 0;
-     padding: 0;
-}
- nav ul li {
-     float: right;
-     position: relative;
-}
- nav ul li a,nav ul li a:visited {
-     display: block;
-     padding: 0 20px;
-     line-height: 65px;
-     color:color(--grey--color);
-     //background: #262626 ;
-     text-decoration: none;
-}
- nav ul li a{
-     //background: transparent;
-     color:color(--grey--color);
-}
- .nav-list a:hover{
-     text-decoration:1px  underline color(--grey--color);
-}
-/*
- .navbar-dropdown li a{
-     background: #2581DC;
-}
-     */
- nav ul li a:not(:only-child):after, nav ul li a:visited:not(:only-child):after {
-     padding-left: 4px;
-     content: ' \025BE';
-}
- nav ul li ul li {
-     min-width: 190px;
-}
- nav ul li ul li a {
-     padding: 15px;
-     line-height: 20px;
-}
-/*
- .navbar-dropdown {
-     position: absolute;
-     display: none;
-     z-index: 1;
-     background: #fff;
-     box-shadow: 0 0 35px 0 rgba(0,0,0,0.25);
-}
-/* Mobile navigation */
- .nav-mobile {
-     display: none;
-     position: absolute;
-     top: 0;
-     right: 0;
-     background: transparent;
-     height: 65px;
-     width: 70px;
-}
- @media only screen and (max-width: 800px) {
-    .brand {
-      padding-left:10px;
-      font-size:.7rem;
-   }
-
-
-     .nav-mobile {
-         display: block;
-    }
-     nav {
-         width: 100%;
-         padding: 65px 0 15px;
-    }
-     nav ul {
-         display: none;
-    }
-     nav ul li {
-         float: none;
-    }
-     nav ul li a {
-         padding: 15px;
-         line-height: 20px;
-         background:color(--white--color);
-    }
-     nav ul li ul li a {
-         padding-left: 30px;
-    }
-    /*
-     .navbar-dropdown {
-         position: static;
-     }
-    */
- @media screen and (min-width:800px) {
-     .nav-list {
-         display: block !important;
-    }
-
-    .brand {
-        position: absolute;
-        padding-left:0;
-        float: left;
-        line-height: 65px;
-        text-transform: uppercase;
-        font-size:.3em;
-        text-decoration: none;
-   }
-   
-}
- #navbar-toggle {
-     position: absolute;
-     left: 18px;
-     top: 15px;
-     cursor: pointer;
-     padding: 10px 35px 16px 0px;
-}
- #navbar-toggle span, #navbar-toggle span:before, #navbar-toggle span:after {
-     cursor: pointer;
-     border-radius: 1px;
-     height: 3px;
-     width: 30px;
-     background:color(--grey--color);
-     position: absolute;
-     display: block;
-     content: '';
-     transition: all 300ms ease-in-out;
-}
- #navbar-toggle span:before {
-     top: -10px;
-}
- #navbar-toggle span:after {
-     bottom: -10px;
-}
- #navbar-toggle.active span {
-     background-color: transparent;
-}
- #navbar-toggle.active span:before, #navbar-toggle.active span:after {
-     top: 0;
-}
- #navbar-toggle.active span:before {
-     transform: rotate(45deg);
-}
- #navbar-toggle.active span:after {
-     transform: rotate(-45deg);
-}
- 
-}
-
-
-
-
-
-
-
