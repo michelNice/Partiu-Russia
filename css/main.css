@@ -83,6 +83,7 @@ ul {
   left: 0;
   left: 0;
   width: 100%;
+  border-bottom: 1px solid #faf8f8;
 }
 
 .brand {
@@ -143,7 +144,7 @@ nav ul li a:not(:only-child):after, nav ul li a:visited:not(:only-child):after {
 }
 
 nav ul li ul li {
-  min-width: 190px;
+  min-width: 11.875rem;
 }
 
 nav ul li ul li a {
@@ -161,7 +162,7 @@ nav ul li ul li a {
   width: 4.375rem;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 50rem) {
   .brand {
     padding-left: 0.625rem;
     font-size: 0.7rem;
@@ -188,7 +189,7 @@ nav ul li ul li a {
     padding-left: 30px;
   }
 }
-@media only screen and (max-width: 800px) and (min-width: 800px) {
+@media only screen and (max-width: 50rem) and (min-width: 50rem) {
   .nav-list {
     display: block !important;
   }
@@ -202,7 +203,7 @@ nav ul li ul li a {
     text-decoration: none;
   }
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 50rem) {
   #navbar-toggle {
     position: absolute;
     left: 18px;

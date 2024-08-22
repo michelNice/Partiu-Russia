@@ -73,7 +73,6 @@ html{
     font-family: 'Roboto', 'Open Sans', 'Helvetica', 'Arial', sans-serif;
     color:color(--grey--color);
     font-size:1rem;
-   
 }
 
 a{text-decoration:none;}
@@ -91,7 +90,6 @@ ul{list-style:none;}
     @include fullImg();
 
     @include content();
- 
 }
 
 /**********************/
@@ -107,7 +105,7 @@ ul{list-style:none;}
      left:0;
      left:0;
      width:100%;
-     
+     border-bottom:1px solid #faf8f8;
 }
  .brand {
      position: absolute;
@@ -154,7 +152,7 @@ ul{list-style:none;}
      padding-left: 4px;
      content: ' \025BE';
 }
- nav ul li ul li {min-width: 190px;}
+ nav ul li ul li {min-width: 11.875rem;}
 
  nav ul li ul li a {
      line-height:1.5rem;
@@ -170,7 +168,7 @@ ul{list-style:none;}
      height:4.063rem;
      width:4.375rem;
 }
- @media only screen and (max-width: 800px) {
+ @media only screen and (max-width: 50rem) {
     .brand {
       padding-left:.625rem;
       font-size:.7rem;
@@ -192,7 +190,7 @@ ul{list-style:none;}
     }
      nav ul li ul li a {padding-left: 30px;}
 
- @media screen and (min-width:800px) {
+ @media screen and (min-width:50rem) {
 
      .nav-list {display: block !important;}
     
