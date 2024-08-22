@@ -1,57 +1,77 @@
-var theToggle = document.getElementById('toggle');
+document.addEventListener('DOMContentLoaded', () => {
+    
+  const showPopup = (src) => {
+      const popup = document.querySelector('.popup-image');
 
+      popup.style.display = 'block'
 
-function hasClass(elem, className) {
-	return new RegExp(' ' + className + ' ').test(' ' + elem.className + ' ');
-}
+      document.querySelector('.popup-image img').src = src
+      
+      document.body.style.overflow = 'hidden'
+  }
 
-function addClass(elem, className) {
-    if (!hasClass(elem, className)) {
-    	elem.className += ' ' + className;
-    }
-}
+  const hidePopup = () => {
 
-function removeClass(elem, className) {
-	var newClass = ' ' + elem.className.replace( /[\t\r\n]/g, ' ') + ' ';
-	if (hasClass(elem, className)) {
-        while (newClass.indexOf(' ' + className + ' ') >= 0 ) {
-            newClass = newClass.replace(' ' + className + ' ', ' ');
-        }
-        elem.className = newClass.replace(/^\s+|\s+$/g, '');
-    }
-}
+      const popup = document.querySelector('.popup-image');
 
-function toggleClass(elem, className) {
-	var newClass = ' ' + elem.className.replace( /[\t\r\n]/g, " " ) + ' ';
-    if (hasClass(elem, className)) {
-        while (newClass.indexOf(" " + className + " ") >= 0 ) {
-            newClass = newClass.replace( " " + className + " " , " " );
-        }
-        elem.className = newClass.replace(/^\s+|\s+$/g, '');
-    } else {
-        elem.className += ' ' + className;
-    }
-}
+      popup.style.display = 'none'
 
-theToggle.onclick = function() {
-   toggleClass(this, 'on');
-   return false;
-}
+      document.body.style.overflow = ''
+  }
 
+  document.querySelectorAll('.clickable-image').forEach(image => {
 
+      image.onclick = () => {
+          showPopup(image.getAttribute('src'))
+      }
 
-$('.nav-icon').click(function(){
-    $(this).toggleClass('open')
-});
+  })
 
-$('.nav-icon').click(function(){
-    var nav = $('.js-main-nav')
+  document.querySelector('.popup-image span').onclick = () => {
 
-    nav.slideToggle(200)
+      hidePopup()
+  };
+
+  document.querySelector('.popup-image').onclick = (event) => {
+     
+      if (event.target === document.querySelector('.popup-image')) {
+
+          hidePopup();
+
+      }
+  };
 });
 
 
 
+(function($) { 
+  $(function() { 
+
+  
+    $('#navbar-toggle').click(function() {
+
+      $('nav ul').slideToggle();
+    });
 
 
+    $('#navbar-toggle').on('click', function() {
 
+      this.classList.toggle('active');
+    });
+
+
+    $('nav ul li a:not(:only-child)').click(function(e) {
+
+      $(this).siblings('.navbar-dropdown').slideToggle("slow");
+
+  
+      $('.navbar-dropdown').not($(this).siblings()).hide("slow");
+      e.stopPropagation();
+    });
+
+    $('html').click(function() {
+
+      $('.navbar-dropdown').hide();
+    });
+  }); 
+})(jQuery); 
