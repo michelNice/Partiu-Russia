@@ -444,6 +444,7 @@ ul{list-style:none;}
          }
          a i:hover{
              color:color(--grey--color);
+             color:color(--grey--color);
          }
          
     }
@@ -498,15 +499,12 @@ ul{list-style:none;}
 
     
     .service{
-        //margin:2rem 0;
-       
         h2{font-size:3rem;}
 
         .service-conteiner{
             gap: 50px;
             padding:0.9rem;
         }
-    
         .service-conteiner h2{font-size: 2rem;}
 
         .grid-item {padding:2rem 0;}
@@ -575,8 +573,6 @@ ul{list-style:none;}
 
     button{@include button();}
 }
-
-
 
 .footer{
     padding:2rem 0;
